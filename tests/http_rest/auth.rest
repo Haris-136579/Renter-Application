@@ -1,0 +1,24 @@
+@baseUrl = http://localhost:5000/api
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MjI3ZGZjNDA5YmRjODJjY2RlNjg4YyIsImlhdCI6MTczMDMxNDI3OSwiZXhwIjoxNzMyOTA2Mjc5fQ.defz6JdrLx_LXp_cS8LaJw_OqrPGVWm0VF1_aiJz3bU
+
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "123456"
+}
+
+### Login User
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "john@example.com",
+    "password": "123456"
+}
+
+### Get User Profile
+GET {{baseUrl}}/auth/profile
+Authorization: Bearer {{authToken}}

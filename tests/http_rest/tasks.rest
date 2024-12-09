@@ -1,0 +1,67 @@
+@baseUrl = http://localhost:5000/api
+@taskId = 67228057e7d6c1837ec041d7
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MjI3ZGZjNDA5YmRjODJjY2RlNjg4YyIsImlhdCI6MTczMDMxNDI3OSwiZXhwIjoxNzMyOTA2Mjc5fQ.defz6JdrLx_LXp_cS8LaJw_OqrPGVWm0VF1_aiJz3bU
+
+### Get All Tasks
+GET {{baseUrl}}/tasks
+Authorization: Bearer {{authToken}}
+
+### Create New Task
+POST {{baseUrl}}/tasks
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+    "title": "Learn MERN Stack",
+    "description": "Complete the MERN stack tutorial and build a project"
+}
+
+### Get Single Task
+GET {{baseUrl}}/tasks/{{taskId}}
+Authorization: Bearer {{authToken}}
+
+### Update Task
+PUT {{baseUrl}}/tasks/{{taskId}}
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+    "title": "Updated Task Title",
+    "description": "Updated task description",
+    "status": "completed"
+}
+
+### Delete Task
+DELETE {{baseUrl}}/tasks/{{taskId}}
+Authorization: Bearer {{authToken}}
+
+### Batch Create Tasks
+
+POST {{baseUrl}}/tasks
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+    "title": "Setup MongoDB",
+    "description": "Install and configure MongoDB for the project"
+}
+
+###
+POST {{baseUrl}}/tasks
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+    "title": "Implement Authentication",
+    "description": "Add JWT authentication to the backend"
+}
+
+###
+POST {{baseUrl}}/tasks
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+    "title": "Create Frontend",
+    "description": "Develop React frontend with Material UI"
+}

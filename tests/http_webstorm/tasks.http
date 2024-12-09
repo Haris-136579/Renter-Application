@@ -1,0 +1,62 @@
+### Get All Tasks
+GET {{baseUrl}}/tasks
+Authorization: Bearer {{auth_token}}
+
+### Create New Task
+POST {{baseUrl}}/tasks
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "title": "Learn MERN Stack",
+  "description": "Complete the MERN stack tutorial and build a project"
+}
+
+### Get Single Task
+GET {{baseUrl}}/tasks/{{taskId}}
+Authorization: Bearer {{auth_token}}
+
+### Update Task
+PUT {{baseUrl}}/tasks/{{taskId}}
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "title": "Updated Task Title",
+  "description": "Updated task description",
+  "status": "completed"
+}
+
+### Delete Task
+DELETE {{baseUrl}}/tasks/{{taskId}}
+Authorization: Bearer {{auth_token}}
+
+### Create Sample Tasks (Batch)
+POST {{baseUrl}}/tasks
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "title": "Setup MongoDB",
+  "description": "Install and configure MongoDB for the project"
+}
+
+###
+POST {{baseUrl}}/tasks
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "title": "Implement Authentication",
+  "description": "Add JWT authentication to the backend"
+}
+
+###
+POST {{baseUrl}}/tasks
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "title": "Create Frontend",
+  "description": "Develop React frontend with Material UI"
+}

@@ -1,0 +1,25 @@
+### Register User
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "123456"
+}
+
+### Login User
+# @name login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "123456"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+
+### Get User Profile
+GET {{baseUrl}}/auth/profile
+Authorization: Bearer {{auth_token}}
